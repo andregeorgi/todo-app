@@ -18,11 +18,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// const uri = process.env.URI ?? "";
-// const port = process.env.PORT;
-
-const uri = "mongodb+srv://admin:albastrugri@todos.nfgv3pq.mongodb.net/todo";
-const port = 5000;
+const uri = process.env.URI ?? "";
+const port = process.env.PORT;
 
 const mongooseOptions = {
   useNewUrlParser: true,
