@@ -59,7 +59,7 @@ function App() {
         <Header onChangeTheme={toggleTheme} checked={mode === "dark"} />
         <Routes>
           <Route
-            path="/login"
+            path="/"
             element={
               <LoginPage
                 setAuthenticated={setAuthenticated}

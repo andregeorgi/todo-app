@@ -4,6 +4,8 @@ import Input from "../../components/Input";
 import Button from "../../components/Button";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
+import FormHelperText from "@material-ui/core/FormHelperText";
 import { MenuItem } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -23,7 +25,6 @@ const useStyles = makeStyles({
   },
   selectEmpty: {
     marginTop: 10,
-    backgroundColor: "white",
     height: "40px",
     borderRadius: 4,
     paddingLeft: "10px",
@@ -33,6 +34,9 @@ const useStyles = makeStyles({
     minWidth: 150,
     height: "80px",
     marginLeft: "10px",
+  },
+  abc: {
+    color: "pink",
   },
 });
 
@@ -90,10 +94,12 @@ function LoginPage({ setAuthenticated, setLoggedInUsername }) {
     <div className={classes.root}>
       <div className={classes.selectDropdown}>
         <FormControl className={classes.formControl}>
+          <InputLabel id="demo-simple-select-error-label">Language</InputLabel>
           <Select
             className={classes.selectEmpty}
             onChange={handleChangeLanguage}
           >
+            <MenuItem value={"none"}>None</MenuItem>
             <MenuItem value={"en"}>English</MenuItem>
             <MenuItem value={"de"}>Deutsch</MenuItem>
           </Select>

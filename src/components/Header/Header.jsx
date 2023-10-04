@@ -18,7 +18,7 @@ const Header = ({ checked, onChangeTheme }) => {
 
   const [open, setOpen] = useState(false);
 
-  const isLoginPage = location.pathname === "/login";
+  const isLoginPage = location.pathname === "/";
   const isRegisterPage = location.pathname === "/register";
   const isTodoPage = location.pathname === "/todo";
 
@@ -28,7 +28,7 @@ const Header = ({ checked, onChangeTheme }) => {
 
   const handleLogout = () => {
     setOpen(false);
-    navigate("/login");
+    navigate("/");
   };
 
   const handleOpen = () => {

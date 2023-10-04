@@ -39,4 +39,8 @@
   *::-webkit-scrollbar {
     display: none;
   }
+
+  .MuiInputLabel-formControl {
+    color: pink;
+  }
 }
